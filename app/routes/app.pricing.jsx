@@ -13,7 +13,7 @@ import {
   export default function PricingPage() {
     return (
       <Page>
-        <TitleBar title="Settings" />
+        <TitleBar title="Pricing" />
         <Layout>
           <Layout.Section>
             <Card>
