@@ -11,7 +11,7 @@ import {
 import { TitleBar } from "@shopify/app-bridge-react";
 import { useState } from "react";
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, Form } from "@remix-run/react";
 
 export async function loader() {
   //get data from database
@@ -19,13 +19,16 @@ export async function loader() {
     name: "My app",
     description: "My app description"
   }
-
   return json(settings);
-}
+};
 
-export async function action() {
+export async function action({ request }) {
   // updates persistent data
-}
+  let settings = await request.formData();
+  settings = Object.fromEntries(settings);
+  return json(settings);
+};
+
 export default function SettingsPage() {
   const settings = useLoaderData();
   const [formState, setFormState] = useState(settings);
@@ -49,14 +52,17 @@ export default function SettingsPage() {
             </BlockStack>
           </Box>
           <Card roundedAbove="sm">
-            <BlockStack gap="400">
-              <TextField label="App name" value={formState.name} onChange={(value) => setFormState({ ...formState, name: value })} />
-              <TextField label="Description" value={formState.description} onChange={(value) => setFormState({ ...formState, description: value })} />
-              <Button submit={true}>Save</Button>
-            </BlockStack>
+            <Form method="post">
+              <BlockStack gap="400">
+                <TextField label="App name" name="name" value={formState.name} onChange={(value) => setFormState({ ...formState, name: value })} />
+                <TextField label="Description" name="description" value={formState.description} onChange={(value) => setFormState({ ...formState, description: value })} />
+                <Button submit={true}>Save</Button>
+              </BlockStack>
+            </Form>
           </Card>
         </InlineGrid>
       </BlockStack>
+
     </Page>
   );
 }
