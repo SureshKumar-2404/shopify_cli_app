@@ -3,7 +3,7 @@
 client_id = "69c9a23f218086a454610bcc0d82834a"
 name = "ai-product-app"
 handle = "ai-product-app-1"
-application_url = "https://laboratory-student-forms-witnesses.trycloudflare.com"
+application_url = "https://ban-batteries-dui-permissions.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://laboratory-student-forms-witnesses.trycloudflare.com/auth/callback",
-  "https://laboratory-student-forms-witnesses.trycloudflare.com/auth/shopify/callback",
-  "https://laboratory-student-forms-witnesses.trycloudflare.com/api/auth/callback"
+  "https://ban-batteries-dui-permissions.trycloudflare.com/auth/callback",
+  "https://ban-batteries-dui-permissions.trycloudflare.com/auth/shopify/callback",
+  "https://ban-batteries-dui-permissions.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
