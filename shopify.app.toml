@@ -3,7 +3,7 @@
 client_id = "69c9a23f218086a454610bcc0d82834a"
 name = "ai-product-app"
 handle = "ai-product-app-1"
-application_url = "https://muscle-frontpage-icon-prot.trycloudflare.com"
+application_url = "https://parker-closure-sequences-bowl.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://muscle-frontpage-icon-prot.trycloudflare.com/auth/callback",
-  "https://muscle-frontpage-icon-prot.trycloudflare.com/auth/shopify/callback",
-  "https://muscle-frontpage-icon-prot.trycloudflare.com/api/auth/callback"
+  "https://parker-closure-sequences-bowl.trycloudflare.com/auth/callback",
+  "https://parker-closure-sequences-bowl.trycloudflare.com/auth/shopify/callback",
+  "https://parker-closure-sequences-bowl.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
